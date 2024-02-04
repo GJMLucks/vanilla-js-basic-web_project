@@ -1,0 +1,32 @@
+.log-in-form {
+    display: flex;
+    padding: 33vh 33vw 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.log-in-form input {
+    background-color: #ffffff10;
+    padding: 12px 4px 8px;
+    border: none;
+    border-bottom: 4px solid #ffffff80;
+    margin-bottom: 16px;
+    font-size: larger;
+    color: white;
+}
+
+.log-in-form input::placeholder {
+    color: #ffffff80;
+}
+
+.log-in-form input[type=submit] {
+    background-color: #00000040;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+}
+
+.log-in-form__error {
+    text-align: center;
+    font-size: x-large;
+}

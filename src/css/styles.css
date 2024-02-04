@@ -1,0 +1,24 @@
+/* Setting */
+@import "reset.css";
+@import "login.css";
+@import "main-header.css";
+@import "main.css";
+@import "todo-list.css";
+
+html {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    color: white;
+}
+
+body {
+    position: relative;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}

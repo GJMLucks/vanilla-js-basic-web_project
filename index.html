@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    1. real-time clock                      - done -
+    2. log-in with local-storage            - done -
+    3. todo list with local-storage         - done -
+    4. random background
+    5. current user position and weather    - done -
+    6. CSS styling
+-->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="" class="log-in-form">
+        <input required type="text"     placeholder="ID">
+        <input required type="password" placeholder="PASSWORD" name="" id="">
+        <input type="submit" value="Log-In">
+    </form>
+
+    <div class="log-in-form__error">
+        <span class="log-in-form__error__text"></span>
+    </div>
+
+    <div id="service" class="hidden">
+        <header>
+            <div class="random-background-btn">
+                <i class="fa-regular fa-image"></i>
+                <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <div class="log-out-btn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+        </header>
+
+        <div class="clock">
+            <span>days</span>
+            <span>time</span>
+        </div>
+        
+        <main>
+            <div class="geolocation">
+                <span class="geolocation__user-postion">user-postion</span>
+                <span class="geolocation__weather">weather</span>
+            </div>
+            
+            <div class="todo-list">
+                <form action="" class="todo-list-input-form">
+                    <input type="text" placeholder="write your TODO" required>
+                    <input type="submit" value="add TODO">
+                </form>
+        
+                <section class="todo-section">
+                    <ul class="todo-section__list"></ul>
+                </section>    
+            </div>
+        </main>
+    </div>
+
+    <script src="src/js/time.js"></script>
+    <script src="src/js/todo-list.js"></script>
+    <script src="src/js/weather.js"></script>
+    <script src="src/js/log-in.js"></script>
+    <script src="src/js/background.js"></script>
+    <script src="https://kit.fontawesome.com/a18e38f263.js" crossorigin="anonymous"></script>
+</body>
+</html>
