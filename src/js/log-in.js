@@ -13,7 +13,7 @@ function onLogIn() {
     mainHTML.classList.remove("hidden");
     userLoginErrorDisplay.classList.add("hidden");
     logInForm.classList.add("hidden");
-    localStorage.setItem("LOGIN_KEY", true);
+    localStorage.setItem(LOGIN_KEY, true);
 }
 
 function onLogOut() {
@@ -21,7 +21,7 @@ function onLogOut() {
     mainHTML.classList.add("hidden");
     userLoginErrorDisplay.classList.remove("hidden");
     logInForm.classList.remove("hidden");
-    localStorage.setItem("LOGIN_KEY", false);
+    localStorage.setItem(LOGIN_KEY, false);
 }
 
 function checkLogInValidation(event) {
@@ -47,7 +47,16 @@ function checkLogInValidation(event) {
     onLogIn();
 }
 
-if( localStorage.getItem("LOGIN_KEY") ){
+if( JSON.parse(localStorage.getItem(USERINFO_KEY)) === null ){
+    localStorage.setItem(USERINFO_KEY, JSON.stringify([{
+        id: "admin",
+        password: "admin"
+    }]));
+}
+if( localStorage.getItem(LOGIN_KEY) === null ){
+    localStorage.setItem(LOGIN_KEY, false);
+}
+if( localStorage.getItem(LOGIN_KEY) === "true" ){
     onLogIn();
 }
 
